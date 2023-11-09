@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../logo.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.35e1ed30.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.4b4a2bd9.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.356b1318.min.css">
@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#c-语言标准阅读记录" class="md-skip">
+        <a href="#c" class="md-skip">
           跳转至
         </a>
       
@@ -401,6 +401,8 @@
       
         
       
+        
+      
     
     
     
@@ -475,6 +477,26 @@
   
   <span class="md-ellipsis">
     📆 最近更新
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../%E4%B8%BB%E9%A1%B5/theme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🌈 颜色主题 & 夜间模式
   </span>
   
 
@@ -4698,7 +4720,7 @@
                   
 
 
-<h1 id="c-语言标准阅读记录">C++ 语言标准阅读记录<a class="headerlink" href="#c-语言标准阅读记录" title="Permanent link">&para;</a></h1>
+<h1 id="c">C++ 语言标准阅读记录</h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 996 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 3 分钟</p>
 </div>
@@ -4714,22 +4736,22 @@
 <p>这里的记录并不完整，当省略某一节或者某节的部分内容时也不一定会专门说明。</p>
 </div>
 </div>
-<h2 id="1-scope">1 Scope<a class="headerlink" href="#1-scope" title="Permanent link">&para;</a></h2>
-<h2 id="2-normative-references">2 Normative references<a class="headerlink" href="#2-normative-references" title="Permanent link">&para;</a></h2>
-<h2 id="3-terms-and-definitions">3 Terms and definitions<a class="headerlink" href="#3-terms-and-definitions" title="Permanent link">&para;</a></h2>
+<h2 id="1-scope">1 Scope</h2>
+<h2 id="2-normative-references">2 Normative references</h2>
+<h2 id="3-terms-and-definitions">3 Terms and definitions</h2>
 <p>这里定义了一些术语。例如 access, signature, undefined behavior, unspecified behavior 等。</p>
 <p><strong>Undefined behavior</strong> 定义为「behavior for which this document imposes no requirements」，其具体行为包括产生不可预测的情况（且不需要给出诊断信息）、终止编译或运行（但需要给出诊断信息）。<sup><a href="https://timsong-cpp.github.io/cppwp/n4868/defns.undefined">defns.undefined</a></sup></p>
 <p><strong>Unspecified behavior</strong> 定义为「在 well-formed 的程序结构和正确的数据中的、depends on implementation 的行为」。例如，<code>int x = f() + g();</code> 中 <code>f()</code> 和 <code>g()</code> 的运算顺序。<sup><a href="https://timsong-cpp.github.io/cppwp/n4868/defns.unspecified">defns.unspecified</a></sup></p>
 <p><strong>Implementation-defined behavior</strong> 定义为「在 well-formed 的程序结构和正确的数据中的、depends on implementation 且在对应 implementation 的文档中说明的行为」。<sup><a href="https://timsong-cpp.github.io/cppwp/n4868/defns.impl.defined">defns.impl.defined</a></sup></p>
 <p>这里还定义了 <strong>valid but unspecified state</strong>，这个会在移动语义那里用到。</p>
-<h2 id="4-general-principles">4 General principles<a class="headerlink" href="#4-general-principles" title="Permanent link">&para;</a></h2>
+<h2 id="4-general-principles">4 General principles</h2>
 <p>4.1 介绍了合规的实现应当满足的条件。</p>
 <p>4.2 介绍了全文的结构。</p>
 <p>4.3 介绍了全文中 syntax notation 的使用。</p>
-<h2 id="5-lexical-conventions">5 Lexical conventions<a class="headerlink" href="#5-lexical-conventions" title="Permanent link">&para;</a></h2>
+<h2 id="5-lexical-conventions">5 Lexical conventions</h2>
 <p>本节给出了 C++ 的词法。其中 5.1 和 5.2 介绍了 C++ 的编译过程。</p>
-<h2 id="6-basics">6 Basics<a class="headerlink" href="#6-basics" title="Permanent link">&para;</a></h2>
-<h3 id="61-preamble">6.1 Preamble<a class="headerlink" href="#61-preamble" title="Permanent link">&para;</a></h3>
+<h2 id="6-basics">6 Basics</h2>
+<h3 id="61-preamble">6.1 Preamble</h3>
 <p>本节介绍了一些基本概念。</p>
 <p><strong>Entity</strong>。An entity is a value, object, reference, structured binding, function, enumerator, type, class member, bit-field, template, template specialization, namespace, or pack.</p>
 <div class="admonition note">
@@ -4737,11 +4759,11 @@
 <p>这里还没给出 object 的定义。</p>
 </div>
 <p><strong>Name</strong>。一个 name 要么代表一个 entity，要么代表一个 label。如果一个 name 代表 entity，那么它由一个 declaration 引入。如果一个 name 代表 label，那么它由一个 goto statement 或者 labeled-statement 引入（后者的名字也是用来 goto 的）。</p>
-<h3 id="62-declarations-and-definitions">6.2 Declarations and definitions<a class="headerlink" href="#62-declarations-and-definitions" title="Permanent link">&para;</a></h3>
+<h3 id="62-declarations-and-definitions">6.2 Declarations and definitions</h3>
 <p>这一节说明了哪些 declaration 同时也是 definition。注意，不存在不是 declaration 的 definition。</p>
 <p>这一节也说明，在 definition 中，object 的类型不应当是 incomplete type 或者 abstract class，或者它们的数组。</p>
 <p>这一节还提到了出现在 <code>extern "C" {}</code> (i.e. linkage-specification) 大括号中不影响 declaration 是否是 definition 的判断。</p>
-<h3 id="63-one-definition-rule">6.3 One-definition rule<a class="headerlink" href="#63-one-definition-rule" title="Permanent link">&para;</a></h3>
+<h3 id="63-one-definition-rule">6.3 One-definition rule</h3>
 <p>No translation unit shall contain more than one definition of any variable, function, class type, enumeration type, template, default argument for a parameter (for a function in a given scope), or default template argument.</p>
 <p>给出了 <strong>potential evaluated</strong> 的定义：一个 expression 或者 conversion 是 potential evaluated 的，除非它：是一个 <strong>unevaluated operand</strong> 或其 subexpression；或者是一个 initialization 中的 conversion 或 conversion sequence。定义了 <strong>potential results</strong> 的集合。</p>
 <p>所谓 <strong>unevaluated operand</strong> 或者 <strong>unevaluated context</strong> <sup><a href="https://timsong-cpp.github.io/cppwp/n4868/expr.context#1">expr.context#1</a></sup>，是指类似于 <code>sizeof(foo())</code> 之类的使用中的 <code>foo()</code>。更具体的可以看这里：<a href="https://stackoverflow.com/a/35088909/14430730">https://stackoverflow.com/a/35088909/14430730</a></p>
@@ -4835,23 +4857,26 @@ buttons.forEach(function(button) {
 </div>
 
 <script src="https://giscus.app/client.js"
-        data-repo="xuan-insr/discussion"
-        data-repo-id="R_kgDOIUW7XA"
+        data-repo="DreamLanter/dreamlanter.github.io"
+        data-repo-id="R_kgDOKrO2DA"
         data-category="General"
-        data-category-id="DIC_kwDOIUW7XM4CSOC3"
+        data-category-id="DIC_kwDOKrO2DM4Ca0Qk"
         data-mapping="pathname"
         data-strict="0"
         data-reactions-enabled="1"
         data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="dark"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
         data-lang="zh-CN"
         crossorigin="anonymous"
         async>
 
 updateScheme();
-
 </script>
+
+
+
+
 
 <!-- Synchronize Giscus theme with palette -->
 <script>
@@ -4951,7 +4976,7 @@ var giscus = document.querySelector("script[src*=giscus]")
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.aecac24b.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.81fa17fe.min.js"></script>
       
         <script src="../../../../js/timeago.min.js"></script>
       

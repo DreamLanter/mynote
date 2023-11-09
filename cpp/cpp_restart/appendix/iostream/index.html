@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../logo.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.35e1ed30.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.4b4a2bd9.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.356b1318.min.css">
@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#-const-和-static-成员" class="md-skip">
+        <a href="#const-static" class="md-skip">
           跳转至
         </a>
       
@@ -401,6 +401,8 @@
       
         
       
+        
+      
     
     
     
@@ -475,6 +477,26 @@
   
   <span class="md-ellipsis">
     📆 最近更新
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../%E4%B8%BB%E9%A1%B5/theme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🌈 颜色主题 & 夜间模式
   </span>
   
 
@@ -1420,7 +1442,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#-const-和-static-成员" class="md-nav__link">
+  <a href="#const-static" class="md-nav__link">
     ▲ const 和 static 成员
   </a>
   
@@ -1428,21 +1450,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#const-成员函数" class="md-nav__link">
+  <a href="#const" class="md-nav__link">
     const 成员函数
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#static-成员变量" class="md-nav__link">
+  <a href="#static" class="md-nav__link">
     static 成员变量
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#static-成员函数" class="md-nav__link">
+  <a href="#static_1" class="md-nav__link">
     static 成员函数
   </a>
   
@@ -4574,7 +4596,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#-const-和-static-成员" class="md-nav__link">
+  <a href="#const-static" class="md-nav__link">
     ▲ const 和 static 成员
   </a>
   
@@ -4582,21 +4604,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#const-成员函数" class="md-nav__link">
+  <a href="#const" class="md-nav__link">
     const 成员函数
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#static-成员变量" class="md-nav__link">
+  <a href="#static" class="md-nav__link">
     static 成员变量
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#static-成员函数" class="md-nav__link">
+  <a href="#static_1" class="md-nav__link">
     static 成员函数
   </a>
   
@@ -4780,8 +4802,8 @@
 <p class="admonition-title">Tips</p>
 <p>关于 cin 和 cout 还有很多问题没有讨论，例如格式控制、遇到错误输入的处理、流的具体实现等等。作为基本要求，大家能够掌握它们的基本用法即可。感兴趣的同学可以自行寻找资料深入了解。</p>
 </div>
-<h3 id="-const-和-static-成员">▲ const 和 static 成员<a class="headerlink" href="#-const-和-static-成员" title="Permanent link">&para;</a></h3>
-<h4 id="const-成员函数">const 成员函数<a class="headerlink" href="#const-成员函数" title="Permanent link">&para;</a></h4>
+<h3 id="const-static">▲ const 和 static 成员</h3>
+<h4 id="const">const 成员函数</h4>
 <p>我们之前看到了 <code>const</code> 成员函数：</p>
 <div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Complex</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">// ...</span>
@@ -4862,7 +4884,7 @@
 <span class="p">}</span>
 </code></pre></div>
 <p>即，当调用者是 <code>const Container</code> 时，第二个重载会被使用，此时返回的是对第 <code>index</code> 个元素的 <code>const</code> 引用；而如果调用者是 <code>Container</code> 时，第一个重载会被使用，此时返回的是对第 <code>index</code> 元素的 non-<code>const</code> 引用。</p>
-<h4 id="static-成员变量">static 成员变量<a class="headerlink" href="#static-成员变量" title="Permanent link">&para;</a></h4>
+<h4 id="static">static 成员变量</h4>
 <p>我们考虑这样一个情形：</p>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">tot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="k">struct</span><span class="w"> </span><span class="nc">User</span><span class="w"> </span><span class="p">{</span>
@@ -4911,7 +4933,7 @@
 </code></pre></div>
 <p>在这种情况下，C++ 要求程序员保证各个编译单元内的这个变量的初始值是同一个，因为链接器在这种情况下会把多个定义合并为一个定义。事实上，在现代的 C++ 中，<code>inline</code> 不再表示「请把这个东西内联」，而是表示「这个东西可以有多个定义；程序员负责保证这些定义是一致的，因此链接时可以把它们合并」。我们会在后面的章节中再讨论 <code>inline</code> 相关的问题。</p>
 <p><code>static</code> 成员变量不应是 <code>mutable</code> 的。</p>
-<h4 id="static-成员函数">static 成员函数<a class="headerlink" href="#static-成员函数" title="Permanent link">&para;</a></h4>
+<h4 id="static_1">static 成员函数</h4>
 <p><code>static</code> 函数的动机和 <code>static</code> 变量一致，都是「属于类，但不需要和具体对象相关」的需求；在这两种情形下，类被简单地当做一种作用域来使用。</p>
 <p>由于 <code>static</code> 成员函数不与任何对象关联，因此它在调用时没有 <code>this</code> 指针。例如：</p>
 <div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">User</span><span class="w"> </span><span class="p">{</span>
@@ -5026,23 +5048,26 @@ buttons.forEach(function(button) {
 </div>
 
 <script src="https://giscus.app/client.js"
-        data-repo="xuan-insr/discussion"
-        data-repo-id="R_kgDOIUW7XA"
+        data-repo="DreamLanter/dreamlanter.github.io"
+        data-repo-id="R_kgDOKrO2DA"
         data-category="General"
-        data-category-id="DIC_kwDOIUW7XM4CSOC3"
+        data-category-id="DIC_kwDOKrO2DM4Ca0Qk"
         data-mapping="pathname"
         data-strict="0"
         data-reactions-enabled="1"
         data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="dark"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
         data-lang="zh-CN"
         crossorigin="anonymous"
         async>
 
 updateScheme();
-
 </script>
+
+
+
+
 
 <!-- Synchronize Giscus theme with palette -->
 <script>
@@ -5142,7 +5167,7 @@ var giscus = document.querySelector("script[src*=giscus]")
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.aecac24b.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.81fa17fe.min.js"></script>
       
         <script src="../../../../js/timeago.min.js"></script>
       

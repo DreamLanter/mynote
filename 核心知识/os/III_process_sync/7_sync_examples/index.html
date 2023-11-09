@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../logo.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.35e1ed30.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.4b4a2bd9.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.356b1318.min.css">
@@ -401,6 +401,8 @@
       
         
       
+        
+      
     
     
     
@@ -475,6 +477,26 @@
   
   <span class="md-ellipsis">
     📆 最近更新
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../%E4%B8%BB%E9%A1%B5/theme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🌈 颜色主题 & 夜间模式
   </span>
   
 
@@ -2266,7 +2288,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#71-经典同步问题" class="md-nav__link">
+  <a href="#71" class="md-nav__link">
     7.1 经典同步问题
   </a>
   
@@ -4596,7 +4618,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#71-经典同步问题" class="md-nav__link">
+  <a href="#71" class="md-nav__link">
     7.1 经典同步问题
   </a>
   
@@ -4658,14 +4680,14 @@
                   
 
 
-<h1 id="7-synchronization-examples">7 Synchronization Examples<a class="headerlink" href="#7-synchronization-examples" title="Permanent link">&para;</a></h1>
+<h1 id="7-synchronization-examples">7 Synchronization Examples</h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 1942 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span> 279 行代码 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 10 分钟</p>
 </div>
-<h2 id="71-经典同步问题">7.1 经典同步问题<a class="headerlink" href="#71-经典同步问题" title="Permanent link">&para;</a></h2>
+<h2 id="71">7.1 经典同步问题</h2>
 <p>一般我们用信号量解决问题，因为信号量相对来说功能更多，而且很多操作系统对信号量做了更多设计，用来避免 busy waiting 等问题。</p>
 <p>信号量的逻辑其实非常简单：一个信号量用来表示 <strong>一类「资源」的余量</strong>；<code>wait()</code> 等待到其有余量时从中取走一个，而 <code>signal()</code> 释放一个资源。因此，在用信号量解决同步问题时，我们通常考虑哪些东西属于资源，对它们的访问有哪些。同时，通过考虑在哪些地方需要等待，我们也能够得到一些提示。</p>
-<h3 id="711-bounded-buffer-problem">7.1.1 Bounded-Buffer Problem<a class="headerlink" href="#711-bounded-buffer-problem" title="Permanent link">&para;</a></h3>
+<h3 id="711-bounded-buffer-problem">7.1.1 Bounded-Buffer Problem</h3>
 <div class="admonition info">
 <p class="admonition-title">Bounded-Buffer Problem</p>
 <p>给定两个进程：producer 和 consumer，它们共用大小为 <span class="arithmatex">\(n\)</span> 的 buffer。Producer 生产数据放入 buffer，consumer 从 buffer 取出数据从而使用之。</p>
@@ -4972,7 +4994,7 @@
 </code></pre></div></td></tr></table></div>
 <p>事实上，如我们之前所说，分析两处需要 wait 的情况（即 producer 在 buffer 满时、consumer 在 buffer 空时）就可以得到使用信号量的提示。也就是说，对于 producer 来说，「空格子」是它需要的资源；而对于 consumer 来说，「有东西的格子」是它需要的资源。我们可以根据这样的提示来设计信号量。</p>
 <p>需要特别注意的是 <code>wait</code> 之间的顺序。例如如果将 <code>wait(lock)</code> 和 <code>wait(fslot)</code> 的顺序调转过来，就会发生和前面提到的情况一样的死锁。</p>
-<h3 id="712-readers-writers-problem">7.1.2 Readers-Writers Problem<a class="headerlink" href="#712-readers-writers-problem" title="Permanent link">&para;</a></h3>
+<h3 id="712-readers-writers-problem">7.1.2 Readers-Writers Problem</h3>
 <div class="admonition info">
 <p class="admonition-title">Readers-Writers Problem</p>
 <p>对一个数据，readers 读，writers 读和写。</p>
@@ -5216,7 +5238,7 @@
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="713-dining-philosophers-problem">7.1.3 Dining-Philosophers Problem<a class="headerlink" href="#713-dining-philosophers-problem" title="Permanent link">&para;</a></h3>
+<h3 id="713-dining-philosophers-problem">7.1.3 Dining-Philosophers Problem</h3>
 <div class="admonition info">
 <p class="admonition-title">Dining-Philosophers Problem</p>
 <p>5 个哲学家一起吃饭！每两个哲学家之间有一根筷子，每个人一次可以拿起来一根筷子，拿到两根筷子的就可以吃一段时间。吃完思考一段时间。</p>
@@ -5284,7 +5306,7 @@
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>另一种解决方案是，奇数号人先拿左边筷子，偶数号人先拿右边筷子，这样也能避免死锁。</p>
-<h2 id="72-linux-sync">7.2 Linux Sync<a class="headerlink" href="#72-linux-sync" title="Permanent link">&para;</a></h2>
+<h2 id="72-linux-sync">7.2 Linux Sync</h2>
 <p>2.6 以前的版本的 kernel 中通过禁用中断来实现一些短的 critical section；2.6 及之后的版本的 kernel 是抢占式的。</p>
 <p>Linux 提供：</p>
 <ul>
@@ -5293,7 +5315,7 @@
 <li>Semaphores</li>
 <li>Reader-writer locks</li>
 </ul>
-<h2 id="73-posix-sync">7.3 POSIX Sync<a class="headerlink" href="#73-posix-sync" title="Permanent link">&para;</a></h2>
+<h2 id="73-posix-sync">7.3 POSIX Sync</h2>
 
   <hr>
 <div class="md-source-file">
@@ -5375,23 +5397,26 @@ buttons.forEach(function(button) {
 </div>
 
 <script src="https://giscus.app/client.js"
-        data-repo="xuan-insr/discussion"
-        data-repo-id="R_kgDOIUW7XA"
+        data-repo="DreamLanter/dreamlanter.github.io"
+        data-repo-id="R_kgDOKrO2DA"
         data-category="General"
-        data-category-id="DIC_kwDOIUW7XM4CSOC3"
+        data-category-id="DIC_kwDOKrO2DM4Ca0Qk"
         data-mapping="pathname"
         data-strict="0"
         data-reactions-enabled="1"
         data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="dark"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
         data-lang="zh-CN"
         crossorigin="anonymous"
         async>
 
 updateScheme();
-
 </script>
+
+
+
+
 
 <!-- Synchronize Giscus theme with palette -->
 <script>
@@ -5491,7 +5516,7 @@ var giscus = document.querySelector("script[src*=giscus]")
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.aecac24b.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.81fa17fe.min.js"></script>
       
         <script src="../../../../js/timeago.min.js"></script>
       

@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../logo.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.35e1ed30.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.4b4a2bd9.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.356b1318.min.css">
@@ -401,6 +401,8 @@
       
         
       
+        
+      
     
     
     
@@ -475,6 +477,26 @@
   
   <span class="md-ellipsis">
     📆 最近更新
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%B8%BB%E9%A1%B5/theme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🌈 颜色主题 & 夜间模式
   </span>
   
 
@@ -3754,14 +3776,14 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#81-first-order-function--一阶函数" class="md-nav__link">
+  <a href="#81-first-order-function" class="md-nav__link">
     8.1 First-Order Function | 一阶函数
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#82-high-order-functions--高阶函数" class="md-nav__link">
+  <a href="#82-high-order-functions" class="md-nav__link">
     8.2 High-Order Functions | 高阶函数
   </a>
   
@@ -4562,14 +4584,14 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#81-first-order-function--一阶函数" class="md-nav__link">
+  <a href="#81-first-order-function" class="md-nav__link">
     8.1 First-Order Function | 一阶函数
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#82-high-order-functions--高阶函数" class="md-nav__link">
+  <a href="#82-high-order-functions" class="md-nav__link">
     8.2 High-Order Functions | 高阶函数
   </a>
   
@@ -4590,13 +4612,13 @@
                   
 
 
-<h1 id="8-function-definitions-and-values">8 Function Definitions and Values<a class="headerlink" href="#8-function-definitions-and-values" title="Permanent link">&para;</a></h1>
+<h1 id="8-function-definitions-and-values">8 Function Definitions and Values</h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 1116 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 4 分钟</p>
 </div>
 <p>在 <strong>E</strong> 语言中，我们能够实现将给定表达式加倍的运算，但是我们不能构造「加倍」这样一个概念，也就是定义一个 <strong>函数 (function)</strong>。</p>
 <p>我们可以通过把一个名字绑定到一棵带约束变量的 abt 上来定义一个函数。这里的约束变量就是函数参数。我们可以用特定的表达式替换约束变量来完成函数的应用。</p>
-<h2 id="81-first-order-function--一阶函数">8.1 First-Order Function | 一阶函数<a class="headerlink" href="#81-first-order-function--一阶函数" title="Permanent link">&para;</a></h2>
+<h2 id="81-first-order-function">8.1 First-Order Function | 一阶函数</h2>
 <p>语言 <strong>ED</strong> 在语言 <strong>E</strong> 的基础上扩充了函数定义和函数应用，其抽象和具体语法如下：</p>
 <p><center><img alt="" src="../2022-12-17-17-55-12.png" width="600" /></center></p>
 <p>函数定义中，<span class="arithmatex">\(f\)</span> 是 <span class="arithmatex">\(e\)</span> 中的一个函数名，它被绑定到抽象子 <span class="arithmatex">\(x_1.e_2\)</span> 上，即参数为 <span class="arithmatex">\(x_1\)</span>，定义是 <span class="arithmatex">\(e_2\)</span>。</p>
@@ -4613,7 +4635,7 @@
 <p>有了函数代换，我们就可以在 <strong>E</strong> 的基础上定义 <strong>ED</strong> 的动态语义了：</p>
 <p><center><img alt="" src="../2022-12-18-20-23-59.png" width="300" /></center></p>
 <p>即，如果在某个 abt <span class="arithmatex">\(e\)</span> 中存在对函数 <span class="arithmatex">\(f\)</span> 的定义，那么在求值时，应当用 <span class="arithmatex">\(x_1.e_2\)</span> 代换 <span class="arithmatex">\(e\)</span> 中所有 <span class="arithmatex">\(f\)</span> 的出现。</p>
-<h2 id="82-high-order-functions--高阶函数">8.2 High-Order Functions | 高阶函数<a class="headerlink" href="#82-high-order-functions--高阶函数" title="Permanent link">&para;</a></h2>
+<h2 id="82-high-order-functions">8.2 High-Order Functions | 高阶函数</h2>
 <p>在 <strong>ED</strong> 中，变量定义和函数定义非常相似；我们试图将它们统一起来。</p>
 <p>语言 <strong>EF</strong> 在语言 <strong>E</strong> 的基础上扩充了函数类型，其抽象和具体语法如下：</p>
 <p><center><img alt="" src="../2022-12-18-20-46-47.png" width="450" /></center></p>
@@ -4726,23 +4748,26 @@ buttons.forEach(function(button) {
 </div>
 
 <script src="https://giscus.app/client.js"
-        data-repo="xuan-insr/discussion"
-        data-repo-id="R_kgDOIUW7XA"
+        data-repo="DreamLanter/dreamlanter.github.io"
+        data-repo-id="R_kgDOKrO2DA"
         data-category="General"
-        data-category-id="DIC_kwDOIUW7XM4CSOC3"
+        data-category-id="DIC_kwDOKrO2DM4Ca0Qk"
         data-mapping="pathname"
         data-strict="0"
         data-reactions-enabled="1"
         data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="dark"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
         data-lang="zh-CN"
         crossorigin="anonymous"
         async>
 
 updateScheme();
-
 </script>
+
+
+
+
 
 <!-- Synchronize Giscus theme with palette -->
 <script>
@@ -4842,7 +4867,7 @@ var giscus = document.querySelector("script[src*=giscus]")
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.aecac24b.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.81fa17fe.min.js"></script>
       
         <script src="../../../js/timeago.min.js"></script>
       

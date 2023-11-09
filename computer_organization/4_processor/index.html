@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../logo.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4b4a2bd9.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
@@ -401,6 +401,8 @@
       
         
       
+        
+      
     
     
     
@@ -475,6 +477,26 @@
   
   <span class="md-ellipsis">
     📆 最近更新
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%BB%E9%A1%B5/theme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🌈 颜色主题 & 夜间模式
   </span>
   
 
@@ -2751,7 +2773,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#412-r-型指令" class="md-nav__link">
+  <a href="#412-r" class="md-nav__link">
     4.1.2 R 型指令
   </a>
   
@@ -2765,14 +2787,14 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#414-跳转指令与-imm-gen-模块" class="md-nav__link">
+  <a href="#414-imm-gen" class="md-nav__link">
     4.1.4 跳转指令与 Imm Gen 模块
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#415-load-指令和-store-指令" class="md-nav__link">
+  <a href="#415-load-store" class="md-nav__link">
     4.1.5 Load 指令和 Store 指令
   </a>
   
@@ -2827,7 +2849,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#424-control-hazards--branch-hazards" class="md-nav__link">
+  <a href="#424-control-hazards-branch-hazards" class="md-nav__link">
     4.2.4 Control Hazards / Branch Hazards
   </a>
   
@@ -4671,7 +4693,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#412-r-型指令" class="md-nav__link">
+  <a href="#412-r" class="md-nav__link">
     4.1.2 R 型指令
   </a>
   
@@ -4685,14 +4707,14 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#414-跳转指令与-imm-gen-模块" class="md-nav__link">
+  <a href="#414-imm-gen" class="md-nav__link">
     4.1.4 跳转指令与 Imm Gen 模块
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#415-load-指令和-store-指令" class="md-nav__link">
+  <a href="#415-load-store" class="md-nav__link">
     4.1.5 Load 指令和 Store 指令
   </a>
   
@@ -4747,7 +4769,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#424-control-hazards--branch-hazards" class="md-nav__link">
+  <a href="#424-control-hazards-branch-hazards" class="md-nav__link">
     4.2.4 Control Hazards / Branch Hazards
   </a>
   
@@ -4780,7 +4802,7 @@
                   
 
 
-<h1 id="4-processor">4 Processor<a class="headerlink" href="#4-processor" title="Permanent link">&para;</a></h1>
+<h1 id="4-processor">4 Processor</h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 4759 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 16 分钟</p>
 </div>
@@ -4789,14 +4811,14 @@
 <p>由于时间原因，本文后半部分有一些地方不完整。</p>
 </div>
 <p>我们讨论过，计算机的 performance 受 <strong>inst#, clock cycle time 和 clock cycles per inst (CPI)</strong> 决定。Clock cycle time 和 CPI 受 processor 的实现方式影响。本章介绍 RISC-V 的 processor 一种实现。</p>
-<h2 id="41-datapath">4.1 Datapath<a class="headerlink" href="#41-datapath" title="Permanent link">&para;</a></h2>
-<h3 id="411-overview">4.1.1 Overview<a class="headerlink" href="#411-overview" title="Permanent link">&para;</a></h3>
+<h2 id="41-datapath">4.1 Datapath</h2>
+<h3 id="411-overview">4.1.1 Overview</h3>
 <p><center><img alt="image.png" src="../../../assets/1654671143448-cfbcadc6-ce0c-4723-bc9e-5c880f31fdac.png" /></center></p>
 <p>上图展示了一个 RISC-V 核心指令的实现（并不完整），包括  <code>ld</code>  ,   <code>sd</code>  ,   <code>add</code>  ,   <code>sub</code>  ,   <code>and</code>  ,   <code>or</code>  ,   <code>beq</code>  。我们简单进行分析。</p>
 <ul>
 <li>PC 寄存器存储当前运行到的指令的地址。<strong>PC</strong> 寄存器连到 <strong>Instruction memory</strong> 中，读出的结果就是当前要运行的指令。这个指令被 <strong>Control</strong> 解析产生相应的信号。我们在 4.1.6 小节中具体说明它的实现。</li>
 </ul>
-<h3 id="412-r-型指令">4.1.2 R 型指令<a class="headerlink" href="#412-r-型指令" title="Permanent link">&para;</a></h3>
+<h3 id="412-r">4.1.2 R 型指令</h3>
 <ul>
 <li><code>add</code>  ,   <code>sub</code>  ,   <code>and</code>  ,   <code>or</code>  这几个 R 型指令总共需要访问 3 个寄存器，如下图所示：</li>
 </ul>
@@ -4812,7 +4834,7 @@
 <p>有聪明的小朋友可能会问，为什么需要  <code>RegWrite</code>  这个控制信号呢？非常简单，因为  <code>Write register</code>  和  <code>Write data</code>  这两条线始终是连着的，Reg files 需要知道什么时候需要写入寄存器，因此只有当  <code>RegWrite = 1</code>  时才会被对应地写入。</p>
 <p>聪明的小朋友可能又会问了，为什么  <code>PC</code>  寄存器也要写入，但是不需要控制信号呢？非常简单，因为  <code>PC</code>  在 <strong>每个</strong> 时钟周期都会被写入，所以只需要在时钟的 <strong>每个</strong> 上升沿或者下降沿触发就好了（我们采取的设计是下降沿触发，我们在 <strong>4.2.3 小节</strong> 再讨论为什么这样设计），不需要额外的控制信号了。</p>
 </div>
-<h3 id="413-alu-control">4.1.3 ALU Control<a class="headerlink" href="#413-alu-control" title="Permanent link">&para;</a></h3>
+<h3 id="413-alu-control">4.1.3 ALU Control</h3>
 <p>在 3.1 节中，我们设计的 ALU 需要这样的控制结构：</p>
 <p><center><img alt="image.png" src="/../assets/1654674035822-c566a50e-cde7-4244-880a-21bcc3b31699.png" /></center></p>
 <p>我们列一下需要使用 ALU 的指令的表格（我们在）：</p>
@@ -4828,7 +4850,7 @@
 <p><center><img alt="image.png" src="../../../assets/1654680132424-1501096b-1795-4e84-aa15-31b81cdbe7bd.png" /></center></p>
 <p>需要理解的是，我们并不是根据机器码来构造电路的，而是相反：电路的设计参考了很多方面的问题，机器码应当主要迎合电路使其设计更加方便。</p>
 </div>
-<h3 id="414-跳转指令与-imm-gen-模块">4.1.4 跳转指令与 Imm Gen 模块<a class="headerlink" href="#414-跳转指令与-imm-gen-模块" title="Permanent link">&para;</a></h3>
+<h3 id="414-imm-gen">4.1.4 跳转指令与 Imm Gen 模块</h3>
 <ul>
 <li>在一条指令运行完后，如果不发生跳转，PC + 4，否则 PC 跳转到 PC + offset 的位置去。这个过程是如何完成的呢？看下图：</li>
 </ul>
@@ -4849,19 +4871,19 @@
 <p class="admonition-title">Imm Gen 模块</p>
 <p>这个模块识别  <code>load</code>  类指令、  <code>store</code>  类指令和  <code>branch</code>  类指令的立即数模式并将其 <strong>符号扩展</strong> 到 64 位，根据  <code>I[5:6]</code>  的不同取值区分这三种情况，构造一个 3:1 MUX 选择实际的立即数，将其传给后面的使用。</p>
 </div>
-<h3 id="415-load-指令和-store-指令">4.1.5 Load 指令和 Store 指令<a class="headerlink" href="#415-load-指令和-store-指令" title="Permanent link">&para;</a></h3>
+<h3 id="415-load-store">4.1.5 Load 指令和 Store 指令</h3>
 <p>懒得写了，可以自己理解一下。</p>
 <p>用文化人的话来说，Load 指令和 Store 指令的数据通路操作留作习题。</p>
-<h3 id="416-control">4.1.6 Control<a class="headerlink" href="#416-control" title="Permanent link">&para;</a></h3>
+<h3 id="416-control">4.1.6 Control</h3>
 <p>看完上述若干小节，control 单元的设计也非常显然了。我们很容易给出如下真值表：</p>
 <p><center><img alt="image.png" src="../../../assets/1654681433205-5ed6293c-b44b-49c5-90de-ae0d3d93cac7.png" /></center></p>
 <p>后面就是连电路的工作了。连出来长这样：</p>
 <p><center><img alt="image.png" src="../../../assets/1654681479004-e8c104d3-390b-4210-a4ee-1495f73f9970.png" width="400" /></center></p>
-<h3 id="417-why-a-single-cycle-implementation-is-not-used-today">4.1.7 Why a Single-Cycle Implementation is not Used Today<a class="headerlink" href="#417-why-a-single-cycle-implementation-is-not-used-today" title="Permanent link">&para;</a></h3>
+<h3 id="417-why-a-single-cycle-implementation-is-not-used-today">4.1.7 Why a Single-Cycle Implementation is not Used Today</h3>
 <p>单周期的实现是指，一个指令的所有工作都在一个时钟周期内完成，也就是 CPI = 1。那么，一个时钟周期的长度就要足够最长的那个指令完成运行。但是，例如  <code>load</code>  类的指令要经过 inst mem, reg file, ALU, data mem, reg file 这么多的步骤，这会使得时钟周期变得很长，导致整体性能变得很差。单周期的实现违反了 <strong>common case fast</strong> 这一设计原则。</p>
 <p>因此，我们引入一种新的实现技术，叫 <strong>流水线 (Pipeline)</strong>。</p>
-<h2 id="42-pipeline">4.2 Pipeline<a class="headerlink" href="#42-pipeline" title="Permanent link">&para;</a></h2>
-<h3 id="421-intro">4.2.1 Intro<a class="headerlink" href="#421-intro" title="Permanent link">&para;</a></h3>
+<h2 id="42-pipeline">4.2 Pipeline</h2>
+<h3 id="421-intro">4.2.1 Intro</h3>
 <p>在小学奥数中我们就学过，并行能够提高整体的效率，例如这个洗衣服的例子：</p>
 <p><center><img alt="image.png" src="../../../assets/1654740094086-8364d8a3-4cec-4e6f-837e-fa717447c1db.png" /></center></p>
 <p>对于单个工作，流水线技术并没有缩短其运行时间；但是由于多个工作可以并行地执行，流水线技术可以更好地压榨资源，使得它们被同时而不是轮流使用，在工作比较多的时候可以增加整体的 <strong>吞吐率 throughput</strong>，从而减少了完成整个任务的时间。</p>
@@ -4900,7 +4922,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="422-structure-hazards">4.2.2 Structure hazards<a class="headerlink" href="#422-structure-hazards" title="Permanent link">&para;</a></h3>
+<h3 id="422-structure-hazards">4.2.2 Structure hazards</h3>
 <p>但是，聪明的小朋友也可以看出一些问题！比如，前一个指令在  <code>ID</code>  阶段的时候，会使用到其在  <code>IF</code>  阶段读出的指令的内容；但与此同时后一个指令已经运行到  <code>IF</code>  阶段并读出了新的指令，那么前一个指令就没的用了！这个现象在很多地方普遍存在，包括 Control 信号的传递，因此我们实际上会在每两个 stage 之间用一些寄存器保存这些内容：</p>
 <p><center><img alt="image.png" src="../../../assets/1655061248536-62d39071-e009-424a-ab6f-4bddbdbe144f.png" /></center></p>
 <p>可以看到，上面这个图除了加了一些竖条条以外和之前没有流水线的时候几乎没什么差别。这些竖条条就是 pipeline registers，例如  <code>IF/ID</code>  就是  <code>IF</code>  和  <code>ID</code>  阶段之间的一些寄存器。</p>
@@ -4914,7 +4936,7 @@
 <p>对于  <code>WB</code>  来说，我们写回时需要记录写到哪个 register 中，这个信息是  <code>ID</code>  阶段从 Instruction 中  <code>[11:7]</code>  的位置取出的，但是直到  <code>WB</code>  阶段才被用到，因此这个信息被存到了  <code>ID/EX</code>  ，下一个周期存到了  <code>EX/MEM</code>  ，下一个周期存到了  <code>MEM/WB</code>  ，然后下一个周期被使用。</p>
 <p><code>MEM</code>  判断是否发生跳转的逻辑类似，略。</p>
 <p>另外，由于在流水线中 IF 和 MEM 都有可能用到内存，为了不出现结构竞争，我们将数据和指令放在不同的地方，以避免同时出现要访问内存而导致的结构竞争。</p>
-<h3 id="423-data-hazards">4.2.3 Data Hazards<a class="headerlink" href="#423-data-hazards" title="Permanent link">&para;</a></h3>
+<h3 id="423-data-hazards">4.2.3 Data Hazards</h3>
 <p>但是，聪明的小朋友仍然可以看出一些问题！考虑这样的指令序列：</p>
 <p><center><img alt="image.png" src="../../../assets/1654795731132-5ba12d3f-c143-43d5-9114-3c22725c4abf.png" /></center></p>
 <p>用简化的数据通路查看一下各指令各 stage 的执行时间：</p>
@@ -4955,7 +4977,7 @@
 <p><center>
     <img alt="" src="../2023-06-24_11-44-24.png" />
 </center></p>
-<h3 id="424-control-hazards--branch-hazards">4.2.4 Control Hazards / Branch Hazards<a class="headerlink" href="#424-control-hazards--branch-hazards" title="Permanent link">&para;</a></h3>
+<h3 id="424-control-hazards-branch-hazards">4.2.4 Control Hazards / Branch Hazards</h3>
 <div class="admonition example">
 <p class="admonition-title">例题</p>
 <p>下面一段代码在不考虑解决 hazard 的情况下的运行结果是什么？假设所有寄存器初始值为 0，Mem(1) = 0x99, Mem(8) = 0xaa, Mem(9) = 0xbb。</p>
@@ -4976,7 +4998,7 @@ PC: 到哪一次执行 <strong>之后</strong>，PC 的值会被改为该值</p>
 <p><center><img alt="" src="../../../assets/1654444212530-325281ab-e86e-4ce4-a4a2-dbd4f451ba04.png" /></center></p>
 </details>
 </div>
-<h2 id="43-exceptions">4.3 Exceptions<a class="headerlink" href="#43-exceptions" title="Permanent link">&para;</a></h2>
+<h2 id="43-exceptions">4.3 Exceptions</h2>
 <p>Exception 和 Interrupt 在很多地方是不作区分的，但是我们做一个简单的区分：</p>
 <p><center><img alt="image.png" src="../../../assets/1654930011877-7a77a135-36e1-4ccc-8822-49a704cc0d95.png" /></center></p>
 <p>当 exception 发生时，在 <strong>Supervisor Exception Program Counter, SEPC</strong> 这个寄存器中保存发生 exception 的指令地址，然后将控制权交给操作系统。操作系统还必须知道发生 exception 的原因，RISC-V 中使用的方法是在 <strong>Supervisor Exception Cause Register, SCAUSE</strong> 这个寄存器中记录 exception 的原因。可以选择的另一种方法是 <strong>vectored interrupt</strong>，</p>
@@ -5061,23 +5083,26 @@ buttons.forEach(function(button) {
 </div>
 
 <script src="https://giscus.app/client.js"
-        data-repo="xuan-insr/discussion"
-        data-repo-id="R_kgDOIUW7XA"
+        data-repo="DreamLanter/dreamlanter.github.io"
+        data-repo-id="R_kgDOKrO2DA"
         data-category="General"
-        data-category-id="DIC_kwDOIUW7XM4CSOC3"
+        data-category-id="DIC_kwDOKrO2DM4Ca0Qk"
         data-mapping="pathname"
         data-strict="0"
         data-reactions-enabled="1"
         data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="dark"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
         data-lang="zh-CN"
         crossorigin="anonymous"
         async>
 
 updateScheme();
-
 </script>
+
+
+
+
 
 <!-- Synchronize Giscus theme with palette -->
 <script>
@@ -5177,7 +5202,7 @@ var giscus = document.querySelector("script[src*=giscus]")
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.aecac24b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.81fa17fe.min.js"></script>
       
         <script src="../../js/timeago.min.js"></script>
       

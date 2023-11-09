@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../logo.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.35e1ed30.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.4b4a2bd9.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.356b1318.min.css">
@@ -401,6 +401,8 @@
       
         
       
+        
+      
     
     
     
@@ -475,6 +477,26 @@
   
   <span class="md-ellipsis">
     📆 最近更新
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../%E4%B8%BB%E9%A1%B5/theme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🌈 颜色主题 & 夜间模式
   </span>
   
 
@@ -2174,14 +2196,14 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#51-多线程编程的优缺点" class="md-nav__link">
+  <a href="#51" class="md-nav__link">
     5.1 多线程编程的优缺点
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#52-线程的实现方式" class="md-nav__link">
+  <a href="#52" class="md-nav__link">
     5.2 线程的实现方式
   </a>
   
@@ -2189,7 +2211,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#多线程模型" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     多线程模型
   </a>
   
@@ -2201,7 +2223,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#53-linux-线程" class="md-nav__link">
+  <a href="#53-linux" class="md-nav__link">
     5.3 ​Linux 线程
   </a>
   
@@ -4582,14 +4604,14 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#51-多线程编程的优缺点" class="md-nav__link">
+  <a href="#51" class="md-nav__link">
     5.1 多线程编程的优缺点
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#52-线程的实现方式" class="md-nav__link">
+  <a href="#52" class="md-nav__link">
     5.2 线程的实现方式
   </a>
   
@@ -4597,7 +4619,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#多线程模型" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     多线程模型
   </a>
   
@@ -4609,7 +4631,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#53-linux-线程" class="md-nav__link">
+  <a href="#53-linux" class="md-nav__link">
     5.3 ​Linux 线程
   </a>
   
@@ -4630,7 +4652,7 @@
                   
 
 
-<h1 id="5-threads">5 Threads<a class="headerlink" href="#5-threads" title="Permanent link">&para;</a></h1>
+<h1 id="5-threads">5 Threads</h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 1630 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 5 分钟</p>
 </div>
@@ -4639,7 +4661,7 @@
 <p><center><img alt="" src="../2022-12-08-17-49-13.png" width="300" /></center></p>
 <p><center><img alt="" src="../2022-12-08-17-49-36.png" width="300" /></center></p>
 <p>​对于支持线程的操作系统，实际调度的是内核级线程而非进程。也就是说，线程是运行以及 CPU 调度的基本单元。（而进程是分配资源的基本单元。）</p>
-<h2 id="51-多线程编程的优缺点">5.1 多线程编程的优缺点<a class="headerlink" href="#51-多线程编程的优缺点" title="Permanent link">&para;</a></h2>
+<h2 id="51">5.1 多线程编程的优缺点</h2>
 <p>采用 <strong>多线程编程 (Multi-Threaded Programming)</strong> 的优点包括：</p>
 <ul>
 <li><strong>Economy:</strong> 建立线程相比进程是很经济的，因为 code, data &amp; heap 已经在内存中了；另外在同一进程的线程间进行 context switch 时也会更快，因为我们不需要 cache flush。</li>
@@ -4658,7 +4680,7 @@
 <li>由于 OS 对每个进程地址空间的大小限制，多线程可能会使得进程的内存限制更加紧缩（这在 64 位体系结构中不再是问题）。</li>
 <li>由于多个线程共享部分内存，因此内存保护会比较困难。</li>
 </ul>
-<h2 id="52-线程的实现方式">5.2 线程的实现方式<a class="headerlink" href="#52-线程的实现方式" title="Permanent link">&para;</a></h2>
+<h2 id="52">5.2 线程的实现方式</h2>
 <p><center><img alt="" src="../2022-12-08-17-54-35.png" width="300" /></center></p>
 <p>​线程实现的重点是共享一些资源；而具体的实现分为 <strong>用户级线程 (User-Level Thread)</strong> 和 <strong>内核级线程 (Kernel-Level Thread)</strong> 两类。</p>
 <p>用户级线程的特点是，它在操作系统上只是一个进程，这个进程包含 <strong>线程库 (Thread Library)</strong> 的部分，​这部分代码负责完成线程的创建、切换等操作；而内核级线程则是由操作系统支持这些操作。</p>
@@ -4673,7 +4695,7 @@
 <li>一旦当前正在运行的线程阻塞，那么在操作系统看来就是整个进程被阻塞了，那么同一个进程中的其他线程也同样会被阻塞；而如果是内核级线程的话，一个线程阻塞了，其他线程仍然能正常运行。</li>
 <li>同一个进程中的多个用户级线程无法在多核上分别运行。</li>
 </ul>
-<h3 id="多线程模型">多线程模型<a class="headerlink" href="#多线程模型" title="Permanent link">&para;</a></h3>
+<h3 id="_1">多线程模型</h3>
 <p>​在同时支持用户级线程和内核级线程的系统中，用户级线程到内核级线程的映射方式有多种选择。</p>
 <p>​​这种方式其实和只支持用户级线程没啥区别：</p>
 <p><center><img alt="" src="../2022-12-08-17-57-30.png" width="300" /></center></p>
@@ -4681,7 +4703,7 @@
 <p><center><img alt="" src="../2022-12-08-17-57-56.png" width="300" /></center></p>
 <p>​​​前面两种的组合，在这种情况下，<span class="arithmatex">\(n\)</span> 个用户级线程可以映射到 <span class="arithmatex">\(m (\le n)\)</span> 个内核级线程上：</p>
 <p><center><img alt="" src="../2022-12-08-17-58-10.png" width="300" /></center></p>
-<h2 id="53-linux-线程">5.3 ​Linux 线程<a class="headerlink" href="#53-linux-线程" title="Permanent link">&para;</a></h2>
+<h2 id="53-linux">5.3 ​Linux 线程</h2>
 <p>​Linux 中没有特别区分进程和线程，它们都被称为 tasks，每一个线程都有一个 <code>task_struct</code>。（虽然从概念上说，线程应该都使用其所属进程的 PCB，但是 Linux 不是这么实现的！）</p>
 <p>​Linux 中可以通过 <code>clone()</code> 新建一个线程；这个系统调用包含了一大堆选项，包括新建的是一个线程还是进程，以及继承 / 新建哪些资源等。事实上，在很多实现中，<code>fork()</code> 的内部就是调用 <code>clone()</code> 实现的。</p>
 <p>​从用户视角而言，Linux 中的线程通过 TID (Thread ID) 标识，而来自同一个进程的多个线程应当具有同样的 PID (Process ID)；系统调用 <code>gettid()</code> 和 <code>getpid()</code> 的实现和这个理解是一样的。</p>
@@ -4784,23 +4806,26 @@ buttons.forEach(function(button) {
 </div>
 
 <script src="https://giscus.app/client.js"
-        data-repo="xuan-insr/discussion"
-        data-repo-id="R_kgDOIUW7XA"
+        data-repo="DreamLanter/dreamlanter.github.io"
+        data-repo-id="R_kgDOKrO2DA"
         data-category="General"
-        data-category-id="DIC_kwDOIUW7XM4CSOC3"
+        data-category-id="DIC_kwDOKrO2DM4Ca0Qk"
         data-mapping="pathname"
         data-strict="0"
         data-reactions-enabled="1"
         data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="dark"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
         data-lang="zh-CN"
         crossorigin="anonymous"
         async>
 
 updateScheme();
-
 </script>
+
+
+
+
 
 <!-- Synchronize Giscus theme with palette -->
 <script>
@@ -4900,7 +4925,7 @@ var giscus = document.querySelector("script[src*=giscus]")
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.aecac24b.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.81fa17fe.min.js"></script>
       
         <script src="../../../../js/timeago.min.js"></script>
       

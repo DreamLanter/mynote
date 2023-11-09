@@ -14,7 +14,7 @@
       
       
       <link rel="icon" href="../../logo.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8">
     
     
       
@@ -22,7 +22,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4b4a2bd9.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#0-数字与计算" class="md-skip">
+        <a href="#0" class="md-skip">
           跳转至
         </a>
       
@@ -395,6 +395,8 @@
       
         
       
+        
+      
     
     
     
@@ -469,6 +471,26 @@
   
   <span class="md-ellipsis">
     📆 最近更新
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%BB%E9%A1%B5/theme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🌈 颜色主题 & 夜间模式
   </span>
   
 
@@ -4496,7 +4518,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#要求" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     要求
   </a>
   
@@ -4504,7 +4526,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#提示" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     提示
   </a>
   
@@ -4516,7 +4538,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#语法说明" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     语法说明
   </a>
   
@@ -4524,14 +4546,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#基本数据类型--value" class="md-nav__link">
+  <a href="#value" class="md-nav__link">
     基本数据类型 | value
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#基本操作--operation" class="md-nav__link">
+  <a href="#operation" class="md-nav__link">
     基本操作 | operation
   </a>
   
@@ -4543,7 +4565,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#测试样例" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     测试样例
   </a>
   
@@ -4584,16 +4606,16 @@
                   
 
 
-<h1 id="0-数字与计算">0 数字与计算<a class="headerlink" href="#0-数字与计算" title="Permanent link">&para;</a></h1>
+<h1 id="0">0 数字与计算</h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 940 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span> 10 行代码 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 3 分钟</p>
 </div>
 <p>Original Post: <a href="http://git-zju-edu-cn-s.webvpn.zju.edu.cn:8001/ppl-course/mua/-/tree/main/">http://git-zju-edu-cn-s.webvpn.zju.edu.cn:8001/ppl-course/mua/-/tree/main/</a></p>
 <p>By PPL2021</p>
-<h2 id="要求">要求<a class="headerlink" href="#要求" title="Permanent link">&para;</a></h2>
+<h2 id="_1">要求</h2>
 <p>你的任务是实现一个 MUA 语言的解释器。从标准输入中读入输入程序，然后在标准输出（屏幕）中写入 MUA 程序的输出（也就是 <code>print</code> 操作产生的效果）。</p>
 <p>你暂时不需要考虑任何输入不合法的情况。输出实数时，你可以在合理的范围内自由定义输出的小数位数。</p>
-<h3 id="提示">提示<a class="headerlink" href="#提示" title="Permanent link">&para;</a></h3>
+<h3 id="_2">提示</h3>
 <ol>
 <li>先完整看完这个提示，再看下面的语法说明。</li>
 <li>为了挑战自己，尝试在看懂语法说明之前 <strong>不要</strong> 看测试样例。确信自己看懂之后，再看测试样例来验证自己有没有真的看懂。如果没有超出你预期的测试样例，奖励你一块饼干 🍪</li>
@@ -4601,14 +4623,14 @@
 <li>完全看懂测试样例之后，再开始构思怎么组织这个程序。</li>
 <li>在构思怎么组织这个程序之前，建议你简单浏览完整的 <a href="../grammar">MUA 语法说明</a>。你不需要完全看懂它，但是你需要获得一些有用的信息，例如之后你可能要支持更多的基本操作、数据类型，或者对现有的数据类型做更多的操作。</li>
 </ol>
-<h2 id="语法说明">语法说明<a class="headerlink" href="#语法说明" title="Permanent link">&para;</a></h2>
-<h3 id="基本数据类型--value">基本数据类型 | value<a class="headerlink" href="#基本数据类型--value" title="Permanent link">&para;</a></h3>
+<h2 id="_3">语法说明</h2>
+<h3 id="value">基本数据类型 | value</h3>
 <p>数字 number</p>
 <ul>
 <li>任何值之间都以空格分隔</li>
 <li>数字的字面量以 <code>[0~9]</code> 或 <code>'-'</code> 开头，不区分整数，浮点数</li>
 </ul>
-<h3 id="基本操作--operation">基本操作 | operation<a class="headerlink" href="#基本操作--operation" title="Permanent link">&para;</a></h3>
+<h3 id="operation">基本操作 | operation</h3>
 <p>基本形式：操作名 参数</p>
 <p>操作名是一个名字，与参数间以空格分隔。参数可以有多个，多个参数间以空格分隔。每个操作所需的参数数量是确定的，所以不需要括号或语句结束符号。所有的操作都有返回值。</p>
 <p>一个程序就是操作的序列。</p>
@@ -4635,8 +4657,8 @@
 <li>在目前看来，一个程序由若干表达式组成。因此你的 <code>main</code> 函数干的事情可能就是一个 <code>while (true)</code> 循环，不断接受表达式。</li>
 </ul>
 <hr />
-<h2 id="测试样例">测试样例<a class="headerlink" href="#测试样例" title="Permanent link">&para;</a></h2>
-<h3 id="input-case">Input Case<a class="headerlink" href="#input-case" title="Permanent link">&para;</a></h3>
+<h2 id="_4">测试样例</h2>
+<h3 id="input-case">Input Case</h3>
 <div class="highlight"><pre><span></span><code><span class="nb">print</span> <span class="o">-</span><span class="mf">1.3</span>
 <span class="nb">print</span> <span class="n">add</span> <span class="mi">1</span> <span class="mi">2</span>
 <span class="nb">print</span> <span class="n">sub</span> <span class="mi">1</span> <span class="mf">3.5</span>
@@ -4649,7 +4671,7 @@
 <span class="n">add</span> <span class="mi">1</span> <span class="mi">4</span>
 </code></pre></div>
 <p>提示：第 9 行应当有 2 个输出，第 10 行不应当有输出</p>
-<h3 id="output-case">Output Case<a class="headerlink" href="#output-case" title="Permanent link">&para;</a></h3>
+<h3 id="output-case">Output Case</h3>
 <p>注：数字的小数位数不重要</p>
 <div class="highlight"><pre><span></span><code>print -1.3
 -1.300000
@@ -4753,23 +4775,26 @@ buttons.forEach(function(button) {
 </div>
 
 <script src="https://giscus.app/client.js"
-        data-repo="xuan-insr/discussion"
-        data-repo-id="R_kgDOIUW7XA"
+        data-repo="DreamLanter/dreamlanter.github.io"
+        data-repo-id="R_kgDOKrO2DA"
         data-category="General"
-        data-category-id="DIC_kwDOIUW7XM4CSOC3"
+        data-category-id="DIC_kwDOKrO2DM4Ca0Qk"
         data-mapping="pathname"
         data-strict="0"
         data-reactions-enabled="1"
         data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="dark"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
         data-lang="zh-CN"
         crossorigin="anonymous"
         async>
 
 updateScheme();
-
 </script>
+
+
+
+
 
 <!-- Synchronize Giscus theme with palette -->
 <script>
@@ -4869,7 +4894,7 @@ var giscus = document.querySelector("script[src*=giscus]")
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.aecac24b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.81fa17fe.min.js"></script>
       
         <script src="../../js/timeago.min.js"></script>
       

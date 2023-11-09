@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../logo.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4b4a2bd9.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#34-自底向上分析--bottom-up-parsing" class="md-skip">
+        <a href="#34-bottom-up-parsing" class="md-skip">
           跳转至
         </a>
       
@@ -401,6 +401,8 @@
       
         
       
+        
+      
     
     
     
@@ -475,6 +477,26 @@
   
   <span class="md-ellipsis">
     📆 最近更新
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%BB%E9%A1%B5/theme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🌈 颜色主题 & 夜间模式
   </span>
   
 
@@ -2924,7 +2946,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#34-自底向上分析--bottom-up-parsing" class="md-nav__link">
+  <a href="#34-bottom-up-parsing" class="md-nav__link">
     3.4 自底向上分析 | Bottom-Up Parsing
   </a>
   
@@ -2959,14 +2981,14 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#352-lr0-parsing-table-的构造" class="md-nav__link">
+  <a href="#352-lr0-parsing-table" class="md-nav__link">
     3.5.2 LR(0) Parsing Table 的构造
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#353-lr0-parsing-table-的使用" class="md-nav__link">
+  <a href="#353-lr0-parsing-table" class="md-nav__link">
     3.5.3 LR(0) Parsing Table 的使用
   </a>
   
@@ -2999,14 +3021,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#39-yacclalr1-语法分析器的生成器" class="md-nav__link">
+  <a href="#39-yacclalr1" class="md-nav__link">
     3.9 Yacc：LALR(1) 语法分析器的生成器
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#习题" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     习题
   </a>
   
@@ -3014,7 +3036,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#lr0--slr1" class="md-nav__link">
+  <a href="#lr0-slr1" class="md-nav__link">
     LR(0) &amp; SLR(1)
   </a>
   
@@ -4642,7 +4664,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#34-自底向上分析--bottom-up-parsing" class="md-nav__link">
+  <a href="#34-bottom-up-parsing" class="md-nav__link">
     3.4 自底向上分析 | Bottom-Up Parsing
   </a>
   
@@ -4677,14 +4699,14 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#352-lr0-parsing-table-的构造" class="md-nav__link">
+  <a href="#352-lr0-parsing-table" class="md-nav__link">
     3.5.2 LR(0) Parsing Table 的构造
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#353-lr0-parsing-table-的使用" class="md-nav__link">
+  <a href="#353-lr0-parsing-table" class="md-nav__link">
     3.5.3 LR(0) Parsing Table 的使用
   </a>
   
@@ -4717,14 +4739,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#39-yacclalr1-语法分析器的生成器" class="md-nav__link">
+  <a href="#39-yacclalr1" class="md-nav__link">
     3.9 Yacc：LALR(1) 语法分析器的生成器
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#习题" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     习题
   </a>
   
@@ -4732,7 +4754,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#lr0--slr1" class="md-nav__link">
+  <a href="#lr0-slr1" class="md-nav__link">
     LR(0) &amp; SLR(1)
   </a>
   
@@ -4767,7 +4789,7 @@
 <p>朋辈辅学录播：<a href="https://www.bilibili.com/video/BV1j94y1d7eW">编译原理速成(3) 语法分析(下) LL(1)与自底向上分析</a></p>
 </blockquote>
 <p>此部分介绍 <strong>自底向上分析 (Buttom-Up Parsing)</strong> 以及 <strong>Yacc</strong> 的有关内容。</p>
-<h2 id="34-自底向上分析--bottom-up-parsing">3.4 自底向上分析 | Bottom-Up Parsing<a class="headerlink" href="#34-自底向上分析--bottom-up-parsing" title="Permanent link">&para;</a></h2>
+<h2 id="34-bottom-up-parsing">3.4 自底向上分析 | Bottom-Up Parsing</h2>
 <p>所谓 <strong>自底向上分析 (Bottom-Up Parsing)</strong>，就是从输入的 token 流一步步简化为 start symbol。Bottom-Up Parsing 相较 Top-Down Parsing 而言更加通用，而且并没有牺牲性能。Bottom-Up Parsing 的思路基于我们之前讨论过的 Top-Down Parsing 的相关思路。</p>
 <p>同样的，我们首先讨论 Bottom-Up Parsing 的过程，稍后再讨论这些过程具体是怎么实现的，例如 parser 如何知道在什么情形下使用哪条 production。</p>
 <p>我们看这样一个例子，其左边一列是输入的 token 流一步一步被 <strong>规约 (reduce)</strong> 到 start symbol 的过程，其右边一列是每一步用到的 production。注意：自底向上分析使用 production 时是将 production 的 rhs 转换为 lhs：</p>
@@ -4783,17 +4805,17 @@
 <p><center><img alt="" src="../../assets/1618582403943-2cc175b0-e5b2-4f6a-b2ac-5a19b2b298c0.png" /></center></p>
 <p>我们容易想到，这个分析过程用栈很容易实现。我们将 | 左边的部分存在栈中，那么 reduce 操作就是将栈顶的若干个元素（对应某个 production 的 rhs，也有可能是 0 个）pop 出来，然后 push 相应 production 的 lhs；而 shift 操作就是读取输入 token 流中的一个 terminal 并将其 push 到栈顶。</p>
 <p>在同一个状态下，parser 可能会有多种可选的操作，例如既可以 reduce 也可以 shift，这称为一个 shift-reduce conflict；有时还可能有多个可选的 reduce 方式，这称为一个 reduce-reduce conflict。这些冲突通常表明语法存在一定问题，当然也可以通过定义优先级的方式进行解决。我们将在后面讨论相应的解决方法。</p>
-<h3 id="viable-prefix">Viable Prefix<a class="headerlink" href="#viable-prefix" title="Permanent link">&para;</a></h3>
+<h3 id="viable-prefix">Viable Prefix</h3>
 <p><center><img alt="image.png" src="../../assets/1649645253673-7e0f205b-b83b-477a-b5af-cc32592f22be.png" /></center></p>
 <p><center><img alt="image.png" src="../../assets/1649645266346-9136ce47-a39d-4413-990f-868d0fc70b1a.png" /></center></p>
-<h2 id="35-lr0-parsing">3.5 LR(0) Parsing<a class="headerlink" href="#35-lr0-parsing" title="Permanent link">&para;</a></h2>
+<h2 id="35-lr0-parsing">3.5 LR(0) Parsing</h2>
 <p><a href="https://www.xiaoheidiannao.com/LR0-Analysis-Table-Construction-Algorithm.html">这篇博客</a> 是使我学明白 LR(0) 分析表构造的关键博客；<a href="https://www.cnblogs.com/bryce1010/p/9387114.html">这篇博客</a> 是使我理解这张表怎么用的关键博客（3.5.3 中的伪代码也基于此处更改）；<a href="http://leaver.me/2012/05/14/%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E5%AE%9E%E4%BE%8B%E7%9A%84lr%E5%88%86%E6%9E%90%E8%BF%87%E7%A8%8B/">这篇博客</a> 中有一个具体的示例演示这张表的用法。</p>
 <p>LR(0) Parsing 是 Bottom-Up Parsing 的一种。LR(k) 表示 Left-to-Right Scan, Rightmost Derivation, Predict Based on <em>k</em> Tokens of Lookahead。</p>
-<h3 id="351-lr0-item">3.5.1 LR(0) Item<a class="headerlink" href="#351-lr0-item" title="Permanent link">&para;</a></h3>
+<h3 id="351-lr0-item">3.5.1 LR(0) Item</h3>
 <p>我们在 3.4 中提到，自底向上分析的过程就是不断地凑出一个 production 的 rhs，并让这些 rhs 位于 Parsing 栈的栈顶。因此假设下一次将会使用到的 production 为 <span class="arithmatex">\(X\to \alpha\beta\)</span>，那么在使用这个 production 进行规约之前，栈顶可能包含了 <span class="arithmatex">\(\cdots\cdots, \cdots\alpha\cdots, \cdots\alpha\beta\)</span> 等情况，即我们凑出这个 production 的 rhs 的进度不同。对于这些情况，我们希望对其做出不一样的操作。</p>
 <p>因此，对于每一个 production，我们用句点 . 来标识一种凑出其 rhs 的进度（right-hand-side position）。例如 <span class="arithmatex">\(X\to\alpha\beta\)</span> 的情况就会有：<span class="arithmatex">\(X\to .\alpha\beta, X\to \alpha.\beta, X\to \alpha\beta.\)</span> 三种。我们将这些情况称为 <strong>LR(0) Item</strong>。我们在后面将看到，我们的分析就是基于这些 Item 的。</p>
 <p>我们举一个例子，贯穿后续小节的学习，直到成功完成分析。对于文法 <code>S'-&gt;S, S-&gt;(S)S | EPSILON</code> ，其 LR(0) Item 包括：<code>S'-&gt;.S</code>, <code>S'-&gt;S.</code>, <code>S-&gt;.(S)S</code>, <code>S-&gt;(.S)S</code>, <code>S-&gt;(S.)S</code>, <code>S-&gt;(S).S</code>, <code>S-&gt;(S)S.</code>, <code>S-&gt;.</code> 。</p>
-<h3 id="352-lr0-parsing-table-的构造">3.5.2 LR(0) Parsing Table 的构造<a class="headerlink" href="#352-lr0-parsing-table-的构造" title="Permanent link">&para;</a></h3>
+<h3 id="352-lr0-parsing-table">3.5.2 LR(0) Parsing Table 的构造</h3>
 <p>我们会看到，LR(0) Item 之间会有一些转换关系。例如：</p>
 <ul>
 <li><span class="arithmatex">\(X\to.\alpha\beta\)</span> 接收 <span class="arithmatex">\(\alpha\)</span> 后就会变成 <span class="arithmatex">\(X\to \alpha.\beta\)</span></li>
@@ -4875,7 +4897,7 @@
 <li>对于每一个可以规约（即句点在 rhs 最后）的 LR(0) item，对其所在状态 i 以及每一个 terminal t，令 <code>T[i, t] = rk</code>，其中 k 是 LR(0) item 对应的 production 的序号。</li>
 </ul>
 <p>我们可以发现，我们建立的表中 <code>T[1, "("], T[3, "("], T[5, "("]</code> 这三项被标红，因为这些表项中有不止一个操作，这说明这里出现了冲突。这三项均为 shift-reduce conflict。这说明，这个文法并不是 LR(0) 文法。（由此可见 LR(0) 文法太弱，不是很有用。但是这会为后面的文法学习打下基础。）</p>
-<h3 id="353-lr0-parsing-table-的使用">3.5.3 LR(0) Parsing Table 的使用<a class="headerlink" href="#353-lr0-parsing-table-的使用" title="Permanent link">&para;</a></h3>
+<h3 id="353-lr0-parsing-table">3.5.3 LR(0) Parsing Table 的使用</h3>
 <p>这里使用的 LR(0) Parsing Table 应当是一个没有冲突的表，即必须对 LR(0) Parsing Table 进行分析。</p>
 <p>在使用 LR(0) Parsing Table 进行分析时，我们维护 2 个栈，分别存储当前分析的 token（就像 3.4 中我们讨论的那样）以及每个 token 对应的状态编号，我们称为 token 栈和状态栈。</p>
 <p>shift 操作的实现是十分容易理解的：将当前 terminal 压入 token 栈，将 <span class="arithmatex">\(s_k\)</span> 指示的状态 k 压入状态栈即可。但对于 reduce 操作（假设操作为 rj ，对应 production 为 A-&gt;β），那么我们需要首先将两个栈 pop 出 |β|（β 中 token 的个数）项，然后查看 <strong>pop 后</strong> 栈顶的状态 S，查看 T[S, A] 的值即 <span class="arithmatex">\(g_k\)</span>，然后将 A 压入 token 栈，k 压入状态栈。</p>
@@ -4902,7 +4924,7 @@ WHILE(1) BEGIN
 END
 </code></pre></div>
 我们说这种分析法为 LR(<em>0</em>)，是因为我们 <strong><em>实际上</em></strong> 没有进行 look-ahead（虽然在上述的伪代码中我们做了这件事）：所有的 reduce 操作实际上是与状态绑定的，而不是与 (状态, 输入) 对绑定的。因此我们在读取当前符号之前，就知道应该 reduce 还是应该 shift 了，而如果是 shift，则可以认为是读入当前符号以后再做判断，也就是说从理论上讲我们没有（或者说不必）做任何 look-ahead。</p>
-<h2 id="36-slr1-parsing">3.6 SLR(1) Parsing<a class="headerlink" href="#36-slr1-parsing" title="Permanent link">&para;</a></h2>
+<h2 id="36-slr1-parsing">3.6 SLR(1) Parsing</h2>
 <p>SLR(1) 中的 S 表示 Simple。SLR(1) Parsing 在 LR(0) 的基础上通过简单的判断尝试解决冲突。</p>
 <p>SLR(1) 在如 3.5.2 那样生成了 LR(0) DFA 后，计算每一个 non-terminal 的 Follow Set，并根据这两者创建 SLR(1) 分析表。</p>
 <p>我们继续使用 3.5 小节的例子：<code>S'-&gt;S</code>, <code>S-&gt;(S)S</code>, <code>S-&gt;EPSILON</code>。那么，FOLLOW(S') = {$}，FOLLOW(S) = {')', $}。</p>
@@ -4979,7 +5001,7 @@ END
 <p>可以发现，与 LR(0) 不同的是，SLR(1) 的 reduce 不再只与状态有关，我们需要提前观看下一个符号从而判断进行什么样的 shift 或 reduce 操作。</p>
 <p>如果这样构造出的 SLR(1) Parsing Table 没有含冲突的表项，那么称这个文法为 SLR(1) Grammar，否则不是。</p>
 <p>SLR(1) Parsing Table 的使用方法与 3.5.3 完全一致，可以使用一样的伪代码。</p>
-<h2 id="37-lr1-parsing">3.7 LR(1) Parsing<a class="headerlink" href="#37-lr1-parsing" title="Permanent link">&para;</a></h2>
+<h2 id="37-lr1-parsing">3.7 LR(1) Parsing</h2>
 <p>LR(1) 在 SLR(1) 的基础上进行了进一步优化。</p>
 <p>我们在 3.5.1 中定义了 LR(0) Item，LR(1) Item 与之相似但更加复杂。一个 LR(1) Item 除了有 production 和 rhs position（用句点表示）以外，还有一个 lookahead symbol。例如 <span class="arithmatex">\(A\to \alpha.\beta,\ t\)</span> 表示 <span class="arithmatex">\(\alpha\)</span> 在栈顶，而且未来的输入将会是 <span class="arithmatex">\(\beta t\)</span>。对 3.5 中提出的例子，根据 start symbol，这里有 LR(1) Item <code>S'-&gt;.S, $</code>。</p>
 <p>LR(1) Item 在如下两种情况下存在转化：</p>
@@ -5005,7 +5027,7 @@ Start Symbol 有 LR(1) Item <code>S'-&gt;.S, $</code>，并可以通过此推出
 <li>对于每一个可以规约（即句点在 rhs 最后）的 LR(1) item，对其所在状态 i 以及每一个 lookahead symbol t，令 <code>T[i, t] = rk</code>，其中 k 是 LR(1) item 对应的 production 的序号。</li>
 </ul>
 <p>如果以此法构造出的 Parsing Table 没有冲突项，则说明文法是 LR(1) 的，否则不是。</p>
-<h2 id="38-lalr1-parsing">3.8 LALR(1) Parsing<a class="headerlink" href="#38-lalr1-parsing" title="Permanent link">&para;</a></h2>
+<h2 id="38-lalr1-parsing">3.8 LALR(1) Parsing</h2>
 <p>可以看到，LR(1) 的状态有点太多了。在刚刚提出 LR(1) 的那个年代，如此大的空间需求还是不太现实的。因此，LR(1) 的简化版本 LALR(1) (Look-Ahead LR(1)) 被提出了。</p>
 <p>对于每一个状态，我们将其包含的所有 LR(1) items 的第一个分量的集合成为这个状态的核心 (core)。例如，对于 3.7 最后例子中的状态图，其状态 5 和 6 的核心均为 <span class="arithmatex">\(\{A\to c., B\to c.\}\)</span>。我们将这样的具有相同核心的状态进行合并，通常能够减少许多状态。</p>
 <p>但是，这有时（虽然很少）也可能引入 reduce-reduce conflict，例如 3.7 最后的例子的 LALR(1) DFA 是：</p>
@@ -5013,11 +5035,11 @@ Start Symbol 有 LR(1) Item <code>S'-&gt;.S, $</code>，并可以通过此推出
 <p>注意到合并后的状态 5&amp;6，会存在 reduce-reduce conflict。这说明这个文法不是 LALR(1) 文法。</p>
 <p>根据 DFA 可以构造 LALR(1) Parsing Table，其方法与 LR(1) 完全一致，在此不再赘述。同样地，如果构造出的 Parsing Table 没有冲突项，则说明文法是 LALR(1) 的，否则不是。</p>
 <p><center><img alt="image.png" src="../../assets/1648826010075-7ea603c6-7f85-4c5e-b135-7e71302dcdcc.png" /></center></p>
-<h2 id="39-yacclalr1-语法分析器的生成器">3.9 Yacc：LALR(1) 语法分析器的生成器<a class="headerlink" href="#39-yacclalr1-语法分析器的生成器" title="Permanent link">&para;</a></h2>
+<h2 id="39-yacclalr1">3.9 Yacc：LALR(1) 语法分析器的生成器</h2>
 <p>我们在 <a href="https://www.yuque.com/xianyuxuan/coding/ttn5z3ka4lH">2.6 Lex：词法分析器的生成器</a> 中学习了 Lex 的使用。我们从本章的学习中发现词法分析器的生成同样是一个相当机械而复杂的过程。因此前人也设计了生成 Parser 的程序，这里我们用到的是 Yacc。</p>
 <p>Yacc 需要和 Lex 结合使用，除非我们在其中自己编写 <code>yylex()</code> 函数。</p>
-<h2 id="习题">习题<a class="headerlink" href="#习题" title="Permanent link">&para;</a></h2>
-<h3 id="lr0--slr1">LR(0) &amp; SLR(1)<a class="headerlink" href="#lr0--slr1" title="Permanent link">&para;</a></h3>
+<h2 id="_1">习题</h2>
+<h3 id="lr0-slr1">LR(0) &amp; SLR(1)</h3>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>5.8 Consider the following grammar</p>
@@ -5153,23 +5175,26 @@ buttons.forEach(function(button) {
 </div>
 
 <script src="https://giscus.app/client.js"
-        data-repo="xuan-insr/discussion"
-        data-repo-id="R_kgDOIUW7XA"
+        data-repo="DreamLanter/dreamlanter.github.io"
+        data-repo-id="R_kgDOKrO2DA"
         data-category="General"
-        data-category-id="DIC_kwDOIUW7XM4CSOC3"
+        data-category-id="DIC_kwDOKrO2DM4Ca0Qk"
         data-mapping="pathname"
         data-strict="0"
         data-reactions-enabled="1"
         data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="dark"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
         data-lang="zh-CN"
         crossorigin="anonymous"
         async>
 
 updateScheme();
-
 </script>
+
+
+
+
 
 <!-- Synchronize Giscus theme with palette -->
 <script>
@@ -5269,7 +5294,7 @@ var giscus = document.querySelector("script[src*=giscus]")
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.aecac24b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.81fa17fe.min.js"></script>
       
         <script src="../../js/timeago.min.js"></script>
       
