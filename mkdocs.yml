@@ -3,7 +3,7 @@ nav:
     - index.md
     - ❤️ 关于我: 主页/about.md
     - 📆 最近更新: recent.md
-    # - 🌈 颜色主题 & 夜间模式: 主页/theme.md
+    - 🌈 颜色主题 & 夜间模式: 主页/theme.md
   - C++:
     - cpp/cpp_restart/index.md
     - 网课 slides 与随材:
@@ -197,19 +197,17 @@ theme:
 edit_uri: ""
 
 markdown_extensions:
-  - toc:
-      permalink: true # link for each title
-      slugify: !!python/name:pymdownx.slugs.uslugify # enable Unicode link
+  - toc
   - admonition
   - abbr
   - attr_list
   - def_list
   - footnotes
   - tables
-  - meta
+  # - meta
   - md_in_html
-  - neoteroi.cards
-  - neoteroi.timeline
+  # - neoteroi.cards
+  # - neoteroi.timeline
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.betterem:
@@ -218,8 +216,8 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight
   - pymdownx.inlinehilite
   - pymdownx.keys
